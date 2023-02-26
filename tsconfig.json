@@ -23,5 +23,5 @@
   },
   "files": ["./.eslintrc.cjs"],
   "include": ["src"],
-  "exclude": ["tailwind.config.js"]
+  "exclude": ["./tailwind.config.js"]
 }
