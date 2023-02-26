@@ -17,7 +17,7 @@ const twJsRegex =
 const twRegex =
   /\.((([a-zA-Z-:]*)[\\\\\\\\]*:)*([\\\\\\\\]*!)?tw-([a-z]*)(-?(([\w\d\\\/\.])|(\[([^\s]*)\])))*)/;
 
-export function myPlugin(): PluginOption {
+export function viteMangleCss(): PluginOption {
   return {
     name: "my-plugin",
     apply: "build",
