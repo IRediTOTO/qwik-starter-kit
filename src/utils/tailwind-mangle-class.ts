@@ -38,6 +38,7 @@ export function myPlugin(): PluginOption {
             twRegex.lastIndex++;
           }
           const originName = m[1];
+          // @ts-ignore
           let target = originName.replace(/\\+/g, "");
 
           if (!classNames.has(target)) {
@@ -64,7 +65,9 @@ export function myPlugin(): PluginOption {
           }
           try {
             rawSource = rawSource.replace(i, classNames.get(i));
-          } catch (error) { }
+          } catch (error) {
+            console.log('error', error)
+          }
         });
 
         // console.log("js classes", classNames);
