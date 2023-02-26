@@ -1,5 +1,13 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import {
+  component$,
+  useBrowserVisibleTask$,
+  useContext,
+  useSignal,
+} from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { onAuthStateChanged } from "firebase/auth";
+import { UserContext } from "~/contexts/user.context";
+import { firebaseApp, firebaseAuth } from "~/firebase/config";
 
 // import { Dialog } from "@headlessui/react";
 // import { Dialog } from "@headlessui/react";
@@ -7,12 +15,14 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const signal = useSignal(false);
-  console.log("click", signal.value);
+  const user = useContext(UserContext);
+  // console.log("useContext user", user);
 
   return (
     <>
       <button
         onClick$={() => {
+          console.log("onClick user", user.email);
           signal.value = !signal.value;
         }}>
         click

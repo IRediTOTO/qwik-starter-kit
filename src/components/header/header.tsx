@@ -1,8 +1,16 @@
-import { component$, useSignal, useStylesScoped$ } from "@builder.io/qwik";
+import {
+  component$,
+  useContext,
+  useSignal,
+  useStylesScoped$,
+} from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
+import { UserContext } from "~/contexts/user.context";
 // import styles from "./header.css?inline";
 
 export default component$(() => {
   const mobileMenuOpen = useSignal(false);
+  const user = useContext(UserContext);
 
   // useStylesScoped$(styles);
   const navigation = [
@@ -13,7 +21,9 @@ export default component$(() => {
   ];
   return (
     <header>
-      <div class="tw-absolute tw-inset-x-0 tw-top-[-10rem] tw--z-10 tw-transform-gpu tw-overflow-hidden tw-blur-3xl sm:tw-top-[-20rem] tw-w-full">
+      <Link
+        href=""
+        class="tw-absolute tw-inset-x-0 tw-top-[-10rem] tw--z-10 tw-transform-gpu tw-overflow-hidden tw-blur-3xl sm:tw-top-[-20rem] tw-w-full">
         <svg
           class="tw-relative tw-left-[calc(50%-11rem)] tw--z-10 tw-h-[21.1875rem] tw-max-w-none tw--translate-x-1/2 tw-rotate-[30deg] sm:tw-left-[calc(50%-30rem)] sm:tw-h-[42.375rem]"
           viewBox="0 0 1155 678">
@@ -35,20 +45,20 @@ export default component$(() => {
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </Link>
       <div class="tw-px-6 tw-pt-6 lg:tw-px-8">
         <nav
           class="tw-flex tw-items-center tw-justify-between"
           aria-label="Global">
           <div class="tw-flex lg:tw-flex-1">
-            <a href="#" class="tw--m-1.5 tw-p-1.5">
+            <Link href="/" class="tw--m-1.5 tw-p-1.5">
               <span class="tw-sr-only">Your Company</span>
               <img
                 class="tw-h-8"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div class="tw-flex lg:tw-hidden">
             <button
@@ -78,11 +88,12 @@ export default component$(() => {
             ))}
           </div>
           <div class="tw-hidden lg:tw-flex lg:tw-flex-1 lg:tw-justify-end">
-            <a
-              href="#"
+            <div>{user.email}</div>
+            <Link
+              href="/login"
               class="tw-text-sm tw-font-semibold tw-leading-6 tw-text-gray-900">
               Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
