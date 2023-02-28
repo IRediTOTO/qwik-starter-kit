@@ -37,7 +37,7 @@ export default component$(() => {
 
   return (
     <>
-      <main class="bg-gradient-to-r from-pink-400 to-purple-200">
+      <main class="">
         <Header />
 
         <section>

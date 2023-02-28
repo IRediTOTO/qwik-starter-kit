@@ -949,10 +949,10 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@builder.io/qwik-city@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik-city/-/qwik-city-0.4.0.tgz#9afb97ba0e11119e44a2527f545e0d84a8fe9759"
-  integrity sha512-XNpmHzSHam7ZYrd12kJdwFerMEck0iOk3Wgb9IlVIuaN/nLuN033qrNWLVq+ZzlhplUea9DGc4job8qMix7WWA==
+"@builder.io/qwik-city@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik-city/-/qwik-city-0.5.2.tgz#016d75c5ef5c47a10d3a0008eb1c576c114af769"
+  integrity sha512-ItpQw+A4nK7Uh+Ypdx+LGqPlOzoIGWg9VgnqWCKpAfJaLnD4ffvSPrgHKQx/DdsDFFl7nBMMq4ddUQSL7xp0Yw==
   dependencies:
     "@mdx-js/mdx" "2.3.0"
     "@types/mdx" "2.0.3"
@@ -960,10 +960,10 @@
     vfile "5.3.7"
     zod "^3.20.6"
 
-"@builder.io/qwik@^0.19.2":
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-0.19.2.tgz#d2f7d39bf6adb6de8497690cb3c41ad62a5fc1c6"
-  integrity sha512-Rxdyx96ucx0+nABLsg1sH7SgrlMdHgpxbR+NR3c53Ux4Jj+Xf+QHNQSIKF9zTV8KClrzmDlqILgmkDU4uMTVcg==
+"@builder.io/qwik@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@builder.io/qwik/-/qwik-0.20.0.tgz#1e2f580b4c039a828337ca2ddda07ca7e77cf78d"
+  integrity sha512-1nwoAiualvxhYnIwAoDiNUBXUM1WI7bOPxPN5rjWCaMvdQvHC96l/ZxWGEndUbO2L2sMbHDwjmMWgjTO7DdFhw==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
