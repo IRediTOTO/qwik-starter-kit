@@ -51,14 +51,14 @@ export default component$(() => {
           class="tw-flex tw-items-center tw-justify-between"
           aria-label="Global">
           <div class="tw-flex lg:tw-flex-1">
-            <Link href="/" class="tw--m-1.5 tw-p-1.5">
+            <a href="/" class="tw--m-1.5 tw-p-1.5">
               <span class="tw-sr-only">Your Company</span>
               <img
                 class="tw-h-8"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-            </Link>
+            </a>
           </div>
           <div class="tw-flex lg:tw-hidden">
             <button
@@ -89,11 +89,11 @@ export default component$(() => {
           </div>
           <div class="tw-hidden lg:tw-flex lg:tw-flex-1 lg:tw-justify-end">
             <div>{user.email}</div>
-            <Link
+            <a
               href="/login"
               class="tw-text-sm tw-font-semibold tw-leading-6 tw-text-gray-900">
               Log in <span aria-hidden="true">&rarr;</span>
-            </Link>
+            </a>
           </div>
         </nav>
       </div>
